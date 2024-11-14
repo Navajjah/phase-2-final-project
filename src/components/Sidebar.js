@@ -7,6 +7,7 @@ import playarrow from '../Assets/icons/play_arrow.svg'
 import addbtn from '../Assets/icons/add.svg'
 import pause from '../Assets/icons/pause.svg'
 import tunesettings from '../Assets/icons/tune_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
+import search from '../Assets/icons/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
 import './Sidebar.css'
 
 
@@ -26,6 +27,7 @@ function Sidebar() {
       </button>
       <ul className="sidebar-links">
         <li><Link to="/"><img src={home} alt='home'/></Link></li>
+        <li><Link to="/search"><img src={search} alt='home'/></Link></li>
         <li><img src={librarymusic} alt='music library'/></li>
         <li><img src={playlistadd} alt='add playlist'/></li>
         <li><Link to="/add-song"><img src={addbtn} alt='add'/></Link> </li>

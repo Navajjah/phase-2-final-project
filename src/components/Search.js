@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import search from '../Assets/icons/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg'
+import './Search.css'
 
 
 function Search({ onSearch }) {
@@ -18,7 +18,7 @@ function Search({ onSearch }) {
         onChange={handleInputChange}
         className='search-input'
         />
-        <button onClick={() => onSearch(inquiry)} className='searchbtn'> {search} </button>
+        <button onClick={() => onSearch(inquiry)} className='searchbtn'> Search </button>
     </div>
   )
 }
