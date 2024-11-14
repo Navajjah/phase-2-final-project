@@ -2,7 +2,8 @@
 .form-container {
     background: transparent;
     border-radius: 15px;
-    padding: 20px;
+    padding: 45px;
+    align-items: center;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
@@ -10,6 +11,7 @@
   
   .form-container input[type="text"] {
     border: none;
+    align-items: center;
     border-radius: 10px;
     padding: 8px;
     margin-bottom: 10px;
