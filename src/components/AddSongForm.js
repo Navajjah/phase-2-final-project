@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import background from '../Assets/Videos/video1.mp4'
 import './AddSongForm.css'
 
 function AddSongForm() {
@@ -82,6 +83,7 @@ function AddSongForm() {
 
   return (
     <div>
+        <video src={background} autoPlay muted loop className='backgroundVideo'></video>
       <h2>{editingSong ? 'Edit Song' : 'Add New Song'}</h2>
       <form onSubmit={handleSubmit} className='form-container'>
         <input
