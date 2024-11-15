@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Navajjah/phase-2-final-project/static/css/main.12e25eef.css",
+    "main.js": "/Navajjah/phase-2-final-project/static/js/main.0d163d83.js",
+    "static/js/453.cb8c9bf5.chunk.js": "/Navajjah/phase-2-final-project/static/js/453.cb8c9bf5.chunk.js",
+    "static/media/video1.mp4": "/Navajjah/phase-2-final-project/static/media/video1.e99a2406eb86336afd62.mp4",
+    "static/media/image4.jpg": "/Navajjah/phase-2-final-project/static/media/image4.89c45e0ad294a37446f5.jpg",
+    "index.html": "/Navajjah/phase-2-final-project/index.html",
+    "static/media/library_music.svg": "/Navajjah/phase-2-final-project/static/media/library_music.bfc1563c022610fdd00ca3db71c8f57b.svg",
+    "static/media/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/Navajjah/phase-2-final-project/static/media/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.04701b3b5ce822b0cc7f0154ebf49f64.svg",
+    "static/media/tune_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg": "/Navajjah/phase-2-final-project/static/media/tune_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.0f678bf94e138b0d9d0300bb47589d64.svg",
+    "static/media/shuffle.svg": "/Navajjah/phase-2-final-project/static/media/shuffle.521326d5bc21bb5941ae102da1243c6e.svg",
+    "static/media/pause.svg": "/Navajjah/phase-2-final-project/static/media/pause.30e378a13e9d4821e3ca3a2e0b653361.svg",
+    "static/media/playlist_add.svg": "/Navajjah/phase-2-final-project/static/media/playlist_add.a1b493672f86518423a2fe286c20a49f.svg",
+    "static/media/graphic_eq.svg": "/Navajjah/phase-2-final-project/static/media/graphic_eq.016063f0c4e1e3d043c484de008b4196.svg",
+    "static/media/home.svg": "/Navajjah/phase-2-final-project/static/media/home.cfe2e1478de5681fd43c045253af957e.svg",
+    "static/media/skip_previous.svg": "/Navajjah/phase-2-final-project/static/media/skip_previous.1fae8ac9fa7618722d45af29f3d07f38.svg",
+    "static/media/skip_next.svg": "/Navajjah/phase-2-final-project/static/media/skip_next.4a7c8e15dc5eb10318aebe707130f1de.svg",
+    "static/media/play_arrow.svg": "/Navajjah/phase-2-final-project/static/media/play_arrow.62ed5bb8a676a1b4fbe371fa99cfbd2f.svg",
+    "static/media/add.svg": "/Navajjah/phase-2-final-project/static/media/add.c158007d71cee80c0ccd0f9e29a2c18f.svg",
+    "main.12e25eef.css.map": "/Navajjah/phase-2-final-project/static/css/main.12e25eef.css.map",
+    "main.0d163d83.js.map": "/Navajjah/phase-2-final-project/static/js/main.0d163d83.js.map",
+    "453.cb8c9bf5.chunk.js.map": "/Navajjah/phase-2-final-project/static/js/453.cb8c9bf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12e25eef.css",
+    "static/js/main.0d163d83.js"
+  ]
+}
