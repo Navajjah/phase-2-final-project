@@ -1,14 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Search.css'
 
 
-function Search({ onSearch }) {
+function Search({ setFilteredSongs }) {
     const [inquiry, setInquiry] = useState('')
 
     const handleInputChange = (e) => {
         setInquiry(e.target.value)
-        onSearch(e.target.value)
     }
+    useEffect(() => {
+        if (inquiry) {
+          fetch(`http://localhost:3001/songs?q=${inquiry}`)
+            .then((resp) => resp.json())
+            .then((data) => {
+              setFilteredSongs(data)
+            })
+            .catch((err) => console.error('Error searching songs:', err))
+        } else {
+          fetch('http://localhost:3001/songs')
+            .then((resp) => resp.json())
+            .then((data) => {
+              setFilteredSongs(data)
+            })
+            .catch((err) => console.error('Error fetching songs:', err))
+        }
+      }, [inquiry, setFilteredSongs])
   return (
     <div className='search-container'>
         <input
@@ -18,7 +34,7 @@ function Search({ onSearch }) {
         onChange={handleInputChange}
         className='search-input'
         />
-        <button onClick={() => onSearch(inquiry)} className='searchbtn'><span class="material-symbols-outlined">search</span> </button>
+        <button className='searchbtn'><span class="material-symbols-outlined">search</span> </button>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import './AddSongForm.css'
 
 function AddSongForm() {
   const [songs, setSongs] = useState([]);
+  const [filteredSongs, setFilteredSongs] = useState([]);
   const [newSong, setNewSong] = useState({
     title: '',
     artist: '',
@@ -14,9 +15,12 @@ function AddSongForm() {
   const [editingSong, setEditingSong] = useState(null)
   useEffect(() => {
     fetch('http://localhost:3001/songs')
-      .then((response) => response.json())
-      .then((data) => setSongs(data))
-      .catch((error) => console.error('Error fetching songs:', error));
+      .then((resp) => resp.json())
+      .then((data) => {
+        setSongs(data)
+        setFilteredSongs(data)
+      })
+      .catch((err) => console.error('Error fetching songs:', err));
   }, []);
 
   
@@ -40,13 +44,13 @@ function AddSongForm() {
         },
         body: JSON.stringify(newSong),
       })
-        .then((response) => response.json())
+        .then((resp) => resp.json())
         .then((updatedSong) => {
           setSongs(songs.map((song) => (song.id === updatedSong.id ? updatedSong : song)))
           setEditingSong(null)
           setNewSong({ title: '', artist: '', audio: '' })
         })
-        .catch((error) => console.error('Error updating song:', error))
+        .catch((err) => console.error('Error updating song:', err))
     } else {
     
       fetch('http://localhost:3001/songs', {
@@ -56,12 +60,12 @@ function AddSongForm() {
         },
         body: JSON.stringify(newSong),
       })
-        .then((response) => response.json())
+        .then((resp) => resp.json())
         .then((addedSong) => {
           setSongs([...songs, addedSong])
           setNewSong({ title: '', artist: '', audio: '' })
         })
-        .catch((error) => console.error('Error adding song:', error))
+        .catch((err) => console.error('Error adding song:', err))
     }
   };
 
@@ -82,10 +86,11 @@ function AddSongForm() {
     setNewSong(song);
   };
 
+
   return (
     <div>
         <video src={background} autoPlay muted loop className='backgroundVideo'></video>
-        <Search />
+        <Search setFilteredSongs={setFilteredSongs} />
       <h2>{editingSong ? 'Edit Song' : 'Add New Song'}</h2>
       <form onSubmit={handleSubmit} className='form-container'>
         <input
@@ -117,7 +122,7 @@ function AddSongForm() {
 
       <h3>Existing Songs</h3>
       <ul className='songslist'>
-        {songs.map((song) => (
+        {filteredSongs.map((song) => (
           <li key={song.id}>
             <p>
               <strong>{song.title}</strong> by {song.artist}

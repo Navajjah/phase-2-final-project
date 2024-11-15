@@ -12,8 +12,6 @@ return (
 <div className='container'>
   <video src={backgroundvid} autoPlay muted loop className='backgroundVideo'></video>
   <div className='blankScreen'></div> 
-  
-  {/* <Search /> */}
   <Player />
   
   </div>
