@@ -18,7 +18,7 @@ function Search({ onSearch }) {
         onChange={handleInputChange}
         className='search-input'
         />
-        <button onClick={() => onSearch(inquiry)} className='searchbtn'> Search </button>
+        <button onClick={() => onSearch(inquiry)} className='searchbtn'><span class="material-symbols-outlined">search</span> </button>
     </div>
   )
 }
