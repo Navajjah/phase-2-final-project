@@ -14,7 +14,7 @@ function AddSongForm() {
 
   const [editingSong, setEditingSong] = useState(null)
   useEffect(() => {
-    fetch('http://localhost:3001/songs')
+    fetch('https://songs-fyem.onrender.com/songs')
       .then((resp) => resp.json())
       .then((data) => {
         setSongs(data)
@@ -37,7 +37,7 @@ function AddSongForm() {
     e.preventDefault();
     if (editingSong) {
       
-      fetch(`http://localhost:3001/songs/${editingSong.id}`, {
+      fetch(`https://songs-fyem.onrender.com/songs/${editingSong.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function AddSongForm() {
         .catch((err) => console.error('Error updating song:', err))
     } else {
     
-      fetch('http://localhost:3001/songs', {
+      fetch('https://songs-fyem.onrender.com/songs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function AddSongForm() {
 
   
   const handleDelete = (id) => {
-    fetch(`http://localhost:3001/songs/${id}`, {
+    fetch(`https://songs-fyem.onrender.com/songs/${id}`, {
       method: 'DELETE',
     })
       .then(() => {

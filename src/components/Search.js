@@ -10,14 +10,14 @@ function Search({ setFilteredSongs }) {
     }
     useEffect(() => {
         if (inquiry) {
-          fetch(`http://localhost:3001/songs?q=${inquiry}`)
+          fetch(`https://songs-fyem.onrender.com/songs?q=${inquiry}`)
             .then((resp) => resp.json())
             .then((data) => {
               setFilteredSongs(data)
             })
             .catch((err) => console.error('Error searching songs:', err))
         } else {
-          fetch('http://localhost:3001/songs')
+          fetch('https://songs-fyem.onrender.com/songs')
             .then((resp) => resp.json())
             .then((data) => {
               setFilteredSongs(data)

@@ -17,7 +17,7 @@ function Player() {
   const audioRef = useRef(null)
 
   useEffect(() => {
-    fetch('http://localhost:3001/songs')
+    fetch('https://songs-fyem.onrender.com/songs')
       .then((response) => response.json())
       .then((data) => {
         setSongs(data)
